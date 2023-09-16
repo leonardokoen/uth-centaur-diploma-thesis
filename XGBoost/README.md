@@ -1,6 +1,56 @@
 # Gaussian Process
 
-This is the XGBoost black-box. All the models are saved in the XGBoostModels directory as JSON files. To read them and perform predictions use predict.py script.
+This is the XGBoost black-box. All the models are saved in the XGBoostModels directory as JSON files.
+
+``` bash
+python GaussianProcess/predict.py
+```
+
+after you have modified settings.py.
+
+If you want to use models in a different script add this repository to python path:
+
+```bash
+nano ~\.bashrc
+```
+
+add this line to the end of the file
+
+```bash
+export PYTHONPATH=/path/to/uth-centaur-diploma-thesis:$PYTHONPATH
+```
+
+save file.
+
+Then execute,
+
+```bash
+source ~/.bashrc
+```
+
+Now that the directory is in the PYTHONPATH you can add the following lines to include the models in your script.
+
+```python
+from XGBoost.model_utils import *
+from XGBoost.model_utils import load_models as load_xgbmodels
+```
+
+Set the PATH_TO_MODELS_XGBOOST accordingly to where the models are saved.  
+Example:
+
+```python
+from XGBoost.model_utils import *
+from XGBoost.model_utils import load_models as load_xgbmodels
+
+PATH_TO_MODELS_XGBOOST = "/path/to/uth-centaur-diploma-thesis/XGBoost/XGBoostModels/"
+day_models = load_xgbmodels(PATH_TO_MODELS_XGBOOST)
+
+TO_PREDICT = [[32, 15, 4,4]]
+
+modified_to_predict = prediction_input(TO_PREDICT)
+
+y_hat = np.array([model.predict(modified_to_predict) for model in day_models])
+```
 
 ## Settings
 

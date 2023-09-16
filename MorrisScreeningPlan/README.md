@@ -1,6 +1,12 @@
 # Morris Screening Plan
 
-This directory contains all the files responsible for preparing a screening plan. 
+This directory contains all the files responsible for preparing a screening plan.
+
+After you modified settings.py run
+
+```bash
+python MorrisScreeningPlan/screening_smaple.py
+```
 
 ## Python Files
 

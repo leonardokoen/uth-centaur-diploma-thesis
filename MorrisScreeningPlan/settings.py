@@ -34,15 +34,15 @@ FILTER_DISTANCE = 12
 
 # FILES
 # Which json file to use as template
-TEMPLATE_FILE = './template.json'
+TEMPLATE_FILE = './MorrisScreeningPlan/template.json'
 
 # Which directory to use to save all screening plan json files
 # DO NOT FORGET THE LAST FRONTSLASH
-JSON_FOLDER_PATH = './test/'
+JSON_FOLDER_PATH = './MorrisScreeningPlan/test/'
 
 # If wipe = True all the json files from JSON_FOLDER_PATH will be erased
 WIPE = True
 
 # A file to save screening plan as csv
-CSV_FILE = 'test.csv'
+CSV_FILE = './MorrisScreeningPlan/test.csv'
 

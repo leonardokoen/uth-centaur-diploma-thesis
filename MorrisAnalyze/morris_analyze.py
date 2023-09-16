@@ -7,15 +7,18 @@ import matplotlib.pyplot as plt
 import math
 from settings import *
 import seaborn as sns
+import shutil
 
 
 def plot_sensitivities(list, name):
     dict = {'Mu*': list[0], 'Sigma':list[1], 'Input':list[2], 'Day':list[3]}
     df = pd.DataFrame(dict)
-
+    
     b = sns.scatterplot(data=df, x="Mu*", y="Sigma", hue = "Input", style = 'Day',size = 'Day',sizes=(20, 200), legend="full")
     b.axes.set_title(name,fontsize=20)
-    plt.show()
+    plt.savefig(os.path.join(FIGURES_DIRECTORY, name + ".png"))
+    plt.clf()
+    
     return
 
 
@@ -110,7 +113,6 @@ def create_sensitivity_day(list_day, df_CO2, df_O2, df_T, df_Mould, df_Wg, df_Da
 
 
 def main():
-
     df_CO2 = pd.read_csv(MORRIS_FINAL_CSV_FILE_CO2)
     df_O2 = pd.read_csv(MORRIS_FINAL_CSV_FILE_O2)
     df_T = pd.read_csv(MORRIS_FINAL_CSV_FILE_T)
@@ -118,6 +120,10 @@ def main():
     df_Wg = pd.read_csv(MORRIS_FINAL_CSV_FILE_MC)
     df_DamageHeat = pd.read_csv(MORRIS_FINAL_CSV_FILE_DAMHEAT)
     sns.set(rc={'figure.figsize':(11.7,8.27)})
+    if os.path.exists(FIGURES_DIRECTORY):
+        shutil.rmtree(FIGURES_DIRECTORY)
+        
+    os.makedirs(FIGURES_DIRECTORY)
     create_sensitivity_day(LIST_OF_DAYS, df_CO2, df_O2, df_T, df_Mould, df_Wg, df_DamageHeat, PROBLEM)
     return
 

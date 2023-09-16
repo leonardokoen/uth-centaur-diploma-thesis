@@ -10,7 +10,7 @@ This directory is responsible for retrieving information from the cases folder. 
 To run the automation
 
 ```bash
-python output_automated_pipeline.py
+python OutputHandling/output_automated_pipeline.py
 ```
 
 ## Settings
@@ -30,7 +30,9 @@ These are the hardlimits for the output values.
 
 -  <span style="color:#7CB9E8">CASE_PATH_TEMPLATE</span> : This is an example of how the cases are named and where is the valuable information.
 
--  <span style="color:#7CB9E8">SENSITIVITY_CSV_PATH</span> : This is the csv file that it was produced by Simulation Automation
+-  <span style="color:#7CB9E8">SENSITIVITY_CSV_PATH</span> : This is the csv file that it was produced by a sampling method either LatinHypercubeSampling or MorrisScreeningPlan.
+
+Note: If you did not create the sample plan with one of these methods LatinHypercubeSampling or MorrisScreeningPlan, then you have to provide a csv file that has the following format. (# ID,loadingOrder,quantity,temp,mc,broken,damage,fermented,testWeight) this is the first line of the csv file and evey row should be aligned with the number of each sample.(initial conditions of test0.json should be the second row of the csv etc...)
 
 -  <span style="color:#7CB9E8">CASES_FOLDER_PATH</span> : This is the directory where all the cases are placed.
 
@@ -41,3 +43,6 @@ These are the hardlimits for the output values.
 -  <span style="color:#7CB9E8">CSV_FINAL_PATH</span> : This folder if it does not exist it will be created. It will contain the final csv files.
 
 Warning! In every directory path do not forget to place a backslash at the end.
+
+
+

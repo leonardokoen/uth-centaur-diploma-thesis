@@ -17,3 +17,5 @@ MORRIS_FINAL_CSV_FILE_MOULD = "/mnt/e/DiplomaThesis/Code/SmartVesselHold/Morris/
 MORRIS_FINAL_CSV_FILE_DAMHEAT = "/mnt/e/DiplomaThesis/Code/SmartVesselHold/Morris/final_csv/final_DamageHeat.csv"
 
 LIST_OF_DAYS = [10, 20, 30, 44]
+
+FIGURES_DIRECTORY = "./MorrisAnalyze/Figures/"

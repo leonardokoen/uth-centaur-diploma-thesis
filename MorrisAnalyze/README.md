@@ -5,7 +5,7 @@ This directory is responsible for printing the output of Morris's Method after w
 To perform analysis run after you have modified settings.py:
 
 ```bash
-python morris_analyze.py
+python MorrisAnalyze/morris_analyze.py
 ```
 
 ## Settings
@@ -47,3 +47,5 @@ MORRIS_FINAL_CSV_FILE_DAMHEAT</span>
     These are filepaths to the final csv files produced from OutputHandling.
 
 - <span style="color:#7CB9E8">LIST_OF_DAYS</span> : This is a list of the days of the simulation, that we want Morris to Analyze, 3-5 entries are good for analysis and get a first intuition for your output variables.
+
+- <span style="color:#7CB9E8">FIGURES_DIRECTORY</span> : The path where the figures will be saved.

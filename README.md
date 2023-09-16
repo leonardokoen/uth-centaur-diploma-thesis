@@ -34,4 +34,28 @@ This thesis was also the product of my internship with [Centaur Analytics Inc.](
 
 ## Installation
 
-# uth-centaur-diploma-thesis
+Initialy clone the repository:
+
+```bash
+git clone https://github.com/leonardokoen/uth-centaur-diploma-thesis.git
+```
+
+Then add the repository to your $PYTHONPATH:
+
+```bash
+nano ~/.bashrc
+```
+add this line at the end of the file
+
+```bash
+export PYTHONPATH=/path/to/uth-centaur-diploma-thesis:$PYTHONPATH
+```
+save file.
+
+Then execute,
+
+```bash
+source ~/.bashrc
+```
+
+All the scripts are made to be run from uth-centaur-diploma-thesis directory. If you want to alter that behaviour change the paths in settings.py in the directory that you want to work with.

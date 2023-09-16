@@ -3,7 +3,7 @@ SCRIPT = './SimulationsAutomation/sleep_simulation.py'
 
 #The folder with all JSON files
 # !!! DO NOT FORGET TO PUT FRONTSLASH AT THE END !!! 
-INPUT_FOLDER = './SimulationsAutomation/test/test_json/'
+INPUT_FOLDER = './SimulationsAutomation/test/test_json_full/'
 
 #Simulation log file
 LOG_FILE = './SimulationsAutomation/test/simulation_log'

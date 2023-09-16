@@ -5,7 +5,7 @@ This directory contains all the files responsible for preparing a plan with Lati
 To perform lhs run after you have modified settings.py:
 
 ```bash
-python lhs_sample.py
+python LatinHypercubeSampling/lhs_sample.py
 ```
 
 ## Settings
