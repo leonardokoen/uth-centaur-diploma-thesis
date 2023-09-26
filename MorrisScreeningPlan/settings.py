@@ -11,7 +11,7 @@ PROBLEM = {
     }
 
 # Number of morrises trajectories
-# Number of final samples (r - 1)*(n + 1) where:
+# Number of final samples (r)*(n + 1) where:
 # r = number_of_trajectories
 # n = number_of_input_variables
 NUM_OF_TRAJECTORIES = 18

@@ -27,11 +27,11 @@
         {
           "loadingOrder": 1.0,
           "quantity": 2500.0,
-          "temp": 31.8,
-          "mc": 11.8,
+          "temp": 27.0,
+          "mc": 12.6,
           "broken": 5.2,
           "damage": 12.0,
-          "fermented": 8.8,
+          "fermented": 12.0,
           "testWeight": 68.9
         }
       ]

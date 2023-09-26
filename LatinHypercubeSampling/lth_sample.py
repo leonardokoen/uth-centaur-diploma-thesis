@@ -7,9 +7,10 @@ from modify_input_template import *
 #   The function is used to filter plans that have big frequency differences.
 def main():
     sampler = qmc.LatinHypercube(d=INPUT_DIMENSIONALITY)
+    
     sample = sampler.random(n=NUMBER_OF_SAMPLES)
+    sample = qmc.scale(sample, LOWER_BOUNDS, UPPER_BOUNDS)
     sample = np.array(sample)
-
     temp_array = np.column_stack((np.ones(sample.shape[0]),2500*np.ones(sample.shape[0])))
     sample = np.column_stack((temp_array, sample))
     sample = np.column_stack((sample, 68.9*np.ones(sample.shape[0])))
