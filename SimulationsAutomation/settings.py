@@ -18,4 +18,4 @@ THRESHOLD = 5
 RANGE_FROM_DEFAULT = True
 
 #If RANGE_FROM_DEFAULT = False you should indicate from which simulation you want to start.
-RANGE_FROM = 15
+RANGE_FROM = 16
