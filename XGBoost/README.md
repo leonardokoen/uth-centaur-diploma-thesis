@@ -1,4 +1,4 @@
-# Gaussian Process
+# XGboost
 
 This is the XGBoost black-box. All the models are saved in the XGBoostModels directory as JSON files.
 
